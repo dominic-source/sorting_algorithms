@@ -9,7 +9,7 @@
  */
 void bubble_sort(int *array, size_t size)
 {
-	size_t i, j, now, later, temp, exchange = 1;
+	size_t i, j, temp, exchange = 1;
 
 	if (size < 2)
 		return;
@@ -18,14 +18,12 @@ void bubble_sort(int *array, size_t size)
 		if (!exchange)
 			break;
 		exchange = 0;
-		for (j = 0; j < (size - 1); j++)
+		for (j = 0; j < (size - 1 - i); j++)
 		{
-			now = array[j];
-			later = array[j + 1];
-			if (now > later)
+			if (array[j] > array[j + 1])
 			{
-				temp = now;
-				array[j] = later;
+				temp = array[j];
+				array[j] = array[j + 1];
 				array[j + 1] = temp;
 				exchange = 1;
 				print_array(array, size);
