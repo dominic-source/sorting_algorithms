@@ -27,6 +27,10 @@ void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
 void insertion_sort_list(listint_t **list);
 void swap_node(listint_t **h, listint_t **n1, listint_t *n2);
+void quick_sort(int *array, size_t size);
+void sort(int *array, size_t size, int low, int high);
+int partition(int *array, size_t size, int low, int high);
+void swap_array(int *a, int *b);
 
 #endif
 
