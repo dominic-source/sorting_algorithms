@@ -33,7 +33,7 @@ int partition(int *array, size_t size, int low, int high);
 void swap_array(int *a, int *b);
 void shell_sort(int *array, size_t size);
 void counting_sort(int *array, size_t size);
-void heap_sort(int *array, sizei_t size);
+void heap_sort(int *array, size_t size);
 size_t list_length(listint_t *list);
 void switch_node(listint_t **list, listint_t **p);
 void cocktail_sort_list(listint_t **list);
