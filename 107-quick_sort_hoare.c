@@ -1,7 +1,7 @@
 #include "sort.h"
 
 /**
- * partition1 - Divides the array into partitions
+ * partition2 - Divides the array into partitions
  * @array: the array of unsorted integers
  * @low: the lower part of the array
  * @high: the higher part of the array
@@ -12,7 +12,7 @@
 int partition2(int *array, int low, int high)
 {
 	int pivot, i, j;
-	
+
 	pivot = array[high - 1];
 	i = low - 1;
 	j = high + 1;
@@ -32,15 +32,14 @@ int partition2(int *array, int low, int high)
 		array[i] ^= array[j];
 		array[j] ^= array[i];
 		array[i] ^= array[j];
-/*		printf("%i, %i : %i\n", pivot, i, j);
-*/	}
+	}
 }
 
 /**
  * quick_sort_hoare2 - implement the quick sort algorithm
  * @array: the array of integers
- * @size: the size of the array
- * @oldarray: the original array of integers
+ * @low: the size of the array
+ * @high: the original array of integers
  * @oldsize: the original size of the array
  */
 void quick_sort_hoare2(int *array, int low, int high, int oldsize)
@@ -68,3 +67,4 @@ void quick_sort_hoare(int *array, size_t size)
 		return;
 	quick_sort_hoare2(array, 0, size - 1, (int)size);
 }
+
