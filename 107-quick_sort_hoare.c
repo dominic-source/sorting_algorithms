@@ -28,7 +28,7 @@ int partition2(int *array, int size)
 			i += 1;
 		j -= 1;
 		while (array[j] > pivot)
-		j -= 1 ;
+		j -= 1;
 
 		if (i >= j)
 			return (j);
